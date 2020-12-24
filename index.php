@@ -80,12 +80,19 @@ error_reporting(E_ALL);
 
         if(!empty($user) &&  !empty($email) && !empty($first) && !empty($last) && !empty($email)) {
 
+                $options = [
+                    'cost' => 12,
+                ];
+            
+            
+                $hashpass = password_hash($pass1, PASSWORD_BCRYPT , $options);
+
                 $usersObj = new UsersView();
                 
                 if ($usersObj->user_exists($user) != $user ) {
 
                 $usersObj = new UsersContr();
-                $usersObj->createUser($email, $user, $pass, $first, $last);
+                $usersObj->createUser($email, $user, $hashpass, $first, $last);
             
 
                 echo "<p>You have been registerd on our sistem</p>";
