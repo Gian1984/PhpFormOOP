@@ -5,7 +5,7 @@ class Users extends Dbh { //here we extend to the database coz this will be the 
     //grab information from the database
     protected function getUser($name){
 
-        $sql = "SELECT * FROM users WHERE firstname = ?"; //selecting from database
+        $sql = "SELECT * FROM users WHERE user = ?"; //selecting from database
         $stmt = $this->connect()->prepare($sql); //istantiate a new statement and utilize $this coz i refer to database class and ask to the database to prepare it
         $stmt->execute([$name]);
 
@@ -15,11 +15,11 @@ class Users extends Dbh { //here we extend to the database coz this will be the 
 
     //send info to the database 
 
-    protected function setUser($firstname, $lastname, $birthdate){
+    protected function setUser($email, $user, $pass, $firstname, $lastname){
 
-        $sql = "INSERT INTO users (firstname, lastname, birthdate) VALUES (?, ?, ?)"; //selecting from database
+        $sql = "INSERT INTO users (email, user, pass, firstname, lastname) VALUES (?, ?, ?, ?, ?)"; //selecting from database
         $stmt = $this->connect()->prepare($sql); //istantiate a new statement and utilize $this coz i refer to database class and ask to the database to prepare it
-        $stmt->execute([$firstname, $lastname, $birthdate]);
+        $stmt->execute([$email, $user, $pass, $firstname, $lastname]);
 
         
     }

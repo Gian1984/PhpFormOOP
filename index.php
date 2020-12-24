@@ -27,18 +27,26 @@ error_reporting(E_ALL);
 
         <div class="col">
             <form>
-                <div class="form col-lg-6 mt-5" method="POST" action="">
+                <div class="form col-lg mt-5" method="POST" action="">
                     <div class="col mt-2">
-                    <label for="exampleInputEmail1">Insert First Name:</label>
-                    <input type="text" name="first" id="first" class="form-control" placeholder="First name" require>
+                        <label for="email">Email:</label>
+                        <input type="text" name="email" id="email" class="form-control" placeholder="Email" required >
                     </div>
                     <div class="col mt-2">
-                    <label for="exampleInputEmail1">Insert Last Name:</label>
-                    <input type="text" name="last" id="last" class="form-control" placeholder="Last name" require>
+                        <label for="username">Username:</label>
+                        <input type="text" name="user" id="user" class="form-control" placeholder="Username" required >
+                    </div>
+                    <div class="col mt-2">
+                        <label for="password">Password:</label>
+                        <input type="text" name="pass" id="pass" class="form-control" placeholder="Password" required >
+                    </div>
+                    <div class="col mt-2">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" name="first" id="first" class="form-control" placeholder="First name" required >
                     </div>
                     <div class="col mt-2 mb-2">
-                    <label for="exampleInputEmail1">Insert Birth date:</label>
-                    <input type="text" name="birth" id="birth" class="form-control" placeholder="Birth date" require>
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" name="last" id="last" class="form-control" placeholder="Last name" required >
                     </div>
                     <!-- <button type="submit" name="submit" class="btn btn-primary mt-2">Send</button> -->
                     <input type="submit" name="submit" value="Send" style="width:auto">
@@ -54,7 +62,7 @@ error_reporting(E_ALL);
     
 <?php
 
-    // Output the user Gianluca from already on the database:
+    // Output the user from already on the database:
 
     // $usersObj = new UsersView();  
     // $usersObj->showUser("Laura");
@@ -70,16 +78,34 @@ error_reporting(E_ALL);
         extract($_REQUEST);
         
 
-        if(!empty($first) && !empty($last) && !empty($birth)){
+        if(!empty($user) &&  !empty($email) && !empty($first) && !empty($last) && !empty($email)) {
 
-            $usersObj2 = new UsersContr();
-            $usersObj2->createUser($first, $last, $birth);
-            // $usersObj2->createUser($_POST['first'], $_POST['last'], $_POST['birth']);
+                $usersObj = new UsersView();
+                
+                if ($usersObj->user_exists($user) != $user ) {
 
-            echo "<p>You have been registerd on our sistem</p>";
-            header('Location: home.php');
-             exit;
+                $usersObj = new UsersContr();
+                $usersObj->createUser($email, $user, $pass, $first, $last);
+            
+
+                echo "<p>You have been registerd on our sistem</p>";
+                header('Location: home.php');
+
+                exit;
+                }  
+                else
+                {
+                    echo '<div class="container">
+                            <div class="row">
+                                <div class="col"></div>
+                                <div class="col mt_2">User already taken!</div>
+                                <div class="col"></div>
+                            </div>
+                        </div>'; 
+                }     
+            
         }
+
         else
         {
             echo '<div class="container">
