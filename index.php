@@ -80,25 +80,40 @@ error_reporting(E_ALL);
 
         if(!empty($user) &&  !empty($email) && !empty($first) && !empty($last) && !empty($email)) {
 
-                $options = [
-                    'cost' => 12,
-                ];
+                // $options = [
+                //     'cost' => 12,
+                // ];
             
             
-                $hashpass = password_hash($pass1, PASSWORD_BCRYPT , $options);
+                // $hashpass = password_hash($pass, PASSWORD_BCRYPT , $options);
 
                 $usersObj = new UsersView();
                 
-                if ($usersObj->user_exists($user) != $user ) {
+                if ($usersObj->user_exists($user) != $user) {
+                    
+                    if ($usersObj->email_exist($email) != $email) {
 
-                $usersObj = new UsersContr();
-                $usersObj->createUser($email, $user, $hashpass, $first, $last);
+                    
+
+                        $usersObj = new UsersContr();
+                        $usersObj->createUser($email, $user, $pass, $first, $last);
             
 
-                echo "<p>You have been registerd on our sistem</p>";
-                header('Location: home.php');
+                        echo "<p>You have been registerd on our sistem</p>";
+                        header('Location: home.php');
 
-                exit;
+                        exit;
+                    } else {
+                        echo '<div class="container">
+                            <div class="row">
+                                <div class="col"></div>
+                                <div class="col mt_2">Email already taken!</div>
+                                <div class="col"></div>
+                            </div>
+                        </div>'; 
+
+                    }
+                    
                 }  
                 else
                 {
