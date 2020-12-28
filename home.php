@@ -5,7 +5,8 @@
     if (isset($_SESSION['user'])) {
         $name = $_SESSION['user'];
 
-        echo 'Welcome '.$name.'</a></li>';
+        echo '<h5>Welcome <span class="badge bg-secondary mt-2">'.$name.'</span></h5>';
+        
     }else {
         header("location: login.php");
         // $msg = '<li class="nav-item"><a class="nav-link text-danger" href="'.$login.'">Log in</a></li><li class="nav-item"><a class="nav-link text-danger" href="'.$subscribe.'">Subscribe</a></li>';
@@ -30,7 +31,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">NYT Feeds</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,83 +60,123 @@
 
 <div class="container">
     <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture0" alt="...">
+      <img src="" class="card-img-top" id="picture0">
       <div class="card-body">
         <h5 class="card-title" id="demo0"></h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text" id="abstract0"></p>
+        <p class="text-muted fst-italic fw-lighter">
+          Read full article <a href="" id="fullArticle0" class="text-reset">here!</a>
+        </p>
+        <p class="card-text"><small class="text-muted">Last updated:</small></p>
+        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date0"></small></p>
       </div>
     </div>
     <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture1" alt="...">
+      <img src="" class="card-img-top" id="picture1">
       <div class="card-body">
         <h5 class="card-title" id="demo1"></h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text" id="abstract1"></p>
+        <p class="text-muted fst-italic fw-lighter">
+          Read full article <a href="" id="fullArticle1" class="text-reset">here!</a>
+        </p>
+        <p class="card-text"><small class="text-muted">Last updated:</small></p>
+        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date1"></small></p>
       </div>
     </div>
     <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture2" alt="...">
+      <img src="" class="card-img-top" id="picture2">
       <div class="card-body">
         <h5 class="card-title" id="demo2"></h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text" id="abstract2"></p>
+        <p class="text-muted fst-italic fw-lighter">
+          Read full article <a href="" id="fullArticle2" class="text-reset">here!</a>
+        </p>
+        <p class="card-text"><small class="text-muted">Last updated:</small></p>
+        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date2"></small></p>
       </div>
     </div>
     <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture3" alt="...">
+      <img src="" class="card-img-top" id="picture3">
       <div class="card-body">
         <h5 class="card-title" id="demo3"></h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text" id="abstract3"></p>
+        <p class="text-muted fst-italic fw-lighter">
+          Read full article <a href="" id="fullArticle3" class="text-reset">here!</a>
+        </p>
+        <p class="card-text"><small class="text-muted">Last updated:</small></p>
+        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date3"></small></p>
       </div>
     </div>
     <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture4" alt="...">
+      <img src="" class="card-img-top" id="picture4">
       <div class="card-body">
         <h5 class="card-title" id="demo4"></h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text" id="abstract4"></p>
+        <p class="text-muted fst-italic fw-lighter">
+          Read full article <a href="" id="fullArticle4" class="text-reset">here!</a>
+        </p>
+        <p class="card-text"><small class="text-muted">Last updated:</small></p>
+        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date4"></small></p>
       </div>
     </div>
     <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture5" alt="...">
+      <img src="" class="card-img-top" id="picture5">
       <div class="card-body">
         <h5 class="card-title" id="demo5"></h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text" id="abstract5"></p>
+        <p class="text-muted fst-italic fw-lighter">
+          Read full article <a href="" id="fullArticle5" class="text-reset">here!</a>
+        </p>
+        <p class="card-text"><small class="text-muted">Last updated:</small></p>
+        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date5"></small></p>
       </div>
     </div>
     <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture6" alt="...">
+      <img src="" class="card-img-top" id="picture6">
       <div class="card-body">
         <h5 class="card-title" id="demo6"></h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text" id="abstract6"></p>
+        <p class="text-muted fst-italic fw-lighter">
+          Read full article <a href="" id="fullArticle6" class="text-reset">here!</a>
+        </p>
+        <p class="card-text"><small class="text-muted">Last updated:</small></p>
+        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date6"></small></p>
       </div>
     </div>
     <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture7" alt="...">
+      <img src="" class="card-img-top" id="picture7">
       <div class="card-body">
         <h5 class="card-title" id="demo7"></h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text" id="abstract7"></p>
+        <p class="text-muted fst-italic fw-lighter">
+          Read full article <a href="" id="fullArticle7" class="text-reset">here!</a>
+        </p>
+        <p class="card-text"><small class="text-muted">Last updated:</small></p>
+        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date7"></small></p>
       </div>
     </div>
     <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture8" alt="...">
+      <img src="" class="card-img-top" id="picture8">
       <div class="card-body">
         <h5 class="card-title" id="demo8"></h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text" id="abstract8"></p>
+        <p class="text-muted fst-italic fw-lighter">
+          Read full article <a href="" id="fullArticle8" class="text-reset">here!</a>
+        </p>
+        <p class="card-text"><small class="text-muted">Last updated:</small></p>
+        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date8"></small></p>
       </div>
     </div>
     <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture9" alt="...">
+      <img src="" class="card-img-top" id="picture9">
       <div class="card-body">
         <h5 class="card-title" id="demo9"></h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text" id="abstract9"></p>
+        <p class="text-muted fst-italic fw-lighter">
+          Read full article <a href="" id="fullArticle9" class="text-reset">here!</a>
+        </p>
+        <p class="card-text"><small class="text-muted">Last updated:</small></p>
+        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date9"></small></p>
       </div>
     </div>
 </div>
