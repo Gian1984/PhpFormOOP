@@ -2,11 +2,13 @@
 // this upload insert something inside the database passing throug the user users.class.php
 class UsersContr extends Users {
 
-    public function createUser($email, $user, $pass, $firstname, $lastname) {
+    public function createUser($email, $user, $hashs, $firstname, $lastname) {
 
-        $this->setUser($email, $user, $pass, $firstname, $lastname);
+        $this->setUser($email, $user, $hashs, $firstname, $lastname);
     }
    
 };
+
+
 
 ?>

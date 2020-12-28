@@ -23,17 +23,28 @@ class Users extends Dbh { //here we extend to the database coz this will be the 
         return $result;    // i put all the the information of the fetch indise result to be able to send it to the users.view.php 
     }
 
+    protected function getPass($hashs){
+
+        $sql = "SELECT * FROM users WHERE hashs =  ?"; //selecting from database
+        $stmt = $this->connect()->prepare($sql); //istantiate a new statement and utilize $this coz i refer to database class and ask to the database to prepare it
+        $stmt->execute([$hashs]);
+
+        $result = $stmt->fetchAll();
+        return $result;    // i put all the the information of the fetch indise result to be able to send it to the users.view.php 
+    }
+
     //send info to the database 
 
-    protected function setUser($email, $user, $pass, $firstname, $lastname){
+    protected function setUser($email, $user, $hashs, $firstname, $lastname){
 
-        $sql = "INSERT INTO users (email, user, pass, firstname, lastname) VALUES (?, ?, ?, ?, ?)"; //selecting from database
+        $sql = "INSERT INTO users (email, user, hashs, firstname, lastname) VALUES (?, ?, ?, ?, ?)"; //selecting from database
         $stmt = $this->connect()->prepare($sql); //istantiate a new statement and utilize $this coz i refer to database class and ask to the database to prepare it
-        $stmt->execute([$email, $user, $pass, $firstname, $lastname]);
+        $stmt->execute([$email, $user, $hashs, $firstname, $lastname]);
 
         
     }
 
 }
+
 
 ?>

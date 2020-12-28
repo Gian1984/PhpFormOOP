@@ -18,6 +18,16 @@ error_reporting(E_ALL);
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <form class="d-flex">
+        <div class="d-grid gap-2 d-md-block">
+            <a class="btn btn-outline-success" href="subscribe.php" role="button">Subscribe</a>  
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
 
 <div class="container">
 
@@ -29,25 +39,17 @@ error_reporting(E_ALL);
             <form>
                 <div class="form col-lg mt-5" method="POST" action="">
                     <div class="col mt-2">
-                        <label for="email">Email:</label>
-                        <input type="text" name="email" id="email" class="form-control" placeholder="Email" required >
-                    </div>
-                    <div class="col mt-2">
                         <label for="username">Username:</label>
                         <input type="text" name="user" id="user" class="form-control" placeholder="Username" required >
                     </div>
-                    <div class="col mt-2">
-                        <label for="password">Password:</label>
-                        <input type="text" name="pass" id="pass" class="form-control" placeholder="Password" required >
-                    </div>
-                    <div class="col mt-2">
-                        <label for="firstname">First Name:</label>
-                        <input type="text" name="first" id="first" class="form-control" placeholder="First name" required >
+                    <div class="col mt-2 mb-2">
+                        <label for="email">Email:</label>
+                        <input type="text" name="email" id="email" class="form-control" placeholder="Email" required >
                     </div>
                     <div class="col mt-2 mb-2">
-                        <label for="lastname">Last Name:</label>
-                        <input type="text" name="last" id="last" class="form-control" placeholder="Last name" required >
-                    </div>
+                        <label for="password">Password:</label>
+                        <input type="password" name="pass" id="pass" class="form-control" placeholder="Password" required >
+                    </div>                    
                     <!-- <button type="submit" name="submit" class="btn btn-primary mt-2">Send</button> -->
                     <input type="submit" name="submit" value="Send" style="width:auto">
                 </div>
@@ -62,15 +64,7 @@ error_reporting(E_ALL);
     
 <?php
 
-    // Output the user from already on the database:
 
-    // $usersObj = new UsersView();  
-    // $usersObj->showUser("Laura");
-
-    // Insert the value every time i refresh the pages:
-
-    // $usersObj2 = new UsersContr();
-    // $usersObj2->createUser("Laura", "Matveeff", "04-08-1983");    
 
     if (isset($_REQUEST['submit'])){
     
@@ -78,36 +72,43 @@ error_reporting(E_ALL);
         extract($_REQUEST);
         
 
-        if(!empty($user) &&  !empty($email) && !empty($first) && !empty($last) && !empty($email)) {
-
-                // $options = [
-                //     'cost' => 12,
-                // ];
-            
-            
-                // $hashpass = password_hash($pass, PASSWORD_BCRYPT , $options);
-
+        if(!empty($user) &&  !empty($email) &&  !empty($pass)) {
+                // var_dump($pass);
+                
                 $usersObj = new UsersView();
                 
-                if ($usersObj->user_exists($user) != $user) {
+                if ($usersObj->user_exists($user) == $user) {
                     
-                    if ($usersObj->email_exist($email) != $email) {
+                    if ($usersObj->email_exist($email) == $email) {
+                        
+                        $hashs=$usersObj->pass_exist($user);
 
+                        if (password_verify ($pass, $hashs)){
+
+                            session_start();
                     
+                            $_SESSION['user'] = $email;
+                                                       
+                            header('Location: home.php');
 
-                        $usersObj = new UsersContr();
-                        $usersObj->createUser($email, $user, $pass, $first, $last);
-            
+                            exit;
 
-                        echo "<p>You have been registerd on our sistem</p>";
-                        header('Location: home.php');
+                        
 
-                        exit;
+                        } else {
+                            echo '<div class="container">
+                                    <div class="row">
+                                        <div class="col"></div>
+                                        <div class="col mt_2">Pass does not match!</div>
+                                        <div class="col"></div>
+                                    </div>
+                                </div>';
+                        }    
                     } else {
                         echo '<div class="container">
                             <div class="row">
                                 <div class="col"></div>
-                                <div class="col mt_2">Email already taken!</div>
+                                <div class="col mt_2">Email does not exist!</div>
                                 <div class="col"></div>
                             </div>
                         </div>'; 
@@ -120,7 +121,7 @@ error_reporting(E_ALL);
                     echo '<div class="container">
                             <div class="row">
                                 <div class="col"></div>
-                                <div class="col mt_2">User already taken!</div>
+                                <div class="col mt_2">User does not exist!</div>
                                 <div class="col"></div>
                             </div>
                         </div>'; 
