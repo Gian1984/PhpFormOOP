@@ -24,7 +24,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Message</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
@@ -48,10 +48,10 @@
             Categories
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="apppage/science.php">Science</a></li>
-            <li><a class="dropdown-item" href="apppage/business.php">Business</a></li>
-            <li><a class="dropdown-item" href="apppage/politics.php">Politics</a></li>
-            <li><a class="dropdown-item" href="apppage/technology.php">Technology</a></li>
+            <li><a class="dropdown-item" href="../apppage/science.php">Science</a></li>
+            <li><a class="dropdown-item" href="../apppage/business.php">Business</a></li>
+            <li><a class="dropdown-item" href="../apppage/politics.php">Politics</a></li>
+            <li><a class="dropdown-item" href="../apppage/technology.php">Technology</a></li>
           </ul>
         </li>
       </ul>
@@ -66,61 +66,6 @@
   </div>
 </nav>
 
-<div class="container">
-    <div class="card text-center mt-5">
-    <div class="card-header">
-        Welcome to the NYT feeds! 
-    </div>
-    <div class="card-body">
-        
-    <div class="row mt-2">
-        <div class="col-sm-6">
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Business</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="../apppage/business.php" class="btn btn-outline-dark">Business</a>
-            </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Politics</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="../apppage/politics.php" class="btn btn-outline-dark">Politics</a>
-            </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mt-3">
-        <div class="col-sm-6">
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Science</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="../apppage/science.php" class="btn btn-outline-dark">Science</a>
-            </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Technology</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="../apppage/technology.php" class="btn btn-outline-dark">Technology</a>
-            </div>
-            </div>
-        </div>
-    </div>
-
-    </div>
-    <div class="card-footer text-muted">
-        Select your favourite news!
-    </div>
-    </div>
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>

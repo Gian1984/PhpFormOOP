@@ -20,8 +20,8 @@ session_destroy();
     <h5 class="card-title">Session ended correctly!</h5>
     <p class="card-text">If you arrive here, you can go to the login page or subscribe!</p>
     <div class="d-grid gap-2 d-md-block">
-            <a class="btn btn-outline-success" href="login.php" role="button">Log in</a>
-            <a class="btn btn-outline-success" href="subscribe.php" role="button">Subscribe</a>   
+            <a class="btn btn-outline-dark" href="login.php" role="button">Log in</a>
+            <a class="btn btn-outline-dark" href="subscribe.php" role="button">Subscribe</a>   
             
         </div>
   </div>
