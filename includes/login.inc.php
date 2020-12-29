@@ -23,7 +23,7 @@
 
                             session_start();
                     
-                            $_SESSION['user'] = $email;
+                            $_SESSION['user'] = $user;
                                                        
                             header('Location: home.php');
 
