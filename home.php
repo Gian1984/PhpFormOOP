@@ -108,7 +108,7 @@
             <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Technology</h5>
-                <p class="card-text">Discover the latest tech gadgets and innovations.</p>
+                <p class="card-text">Discover the latest tech gadgets, innovations, energy & environment.</p>
                 <a href="../apppage/technology.php" class="btn btn-outline-dark">Technology</a>
             </div>
             </div>
