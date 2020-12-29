@@ -6,6 +6,11 @@ class UsersContr extends Users {
 
         $this->setUser($email, $user, $hashs, $firstname, $lastname);
     }
+
+    public function createMessages($email, $messages) {
+
+        $this->setMessage($email, $messages);
+    }
    
 };
 

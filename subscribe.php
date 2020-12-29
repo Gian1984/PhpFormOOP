@@ -1,10 +1,6 @@
 <?php 
 
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
-
- include "includes/class-autoload.inc.php"
+ include "includes/subscribe.inc.php"
 
 ?>
 
@@ -31,13 +27,19 @@ error_reporting(E_ALL);
 
 <div class="container">
 
+    <div class="card text-center mt-5">
+    <div class="card-header">
+        Welcome to the NYT feeds! 
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Please fill the fields to subscribe</h5>
     <div class="row">
 
         <div class="col"></div>
 
         <div class="col">
             <form>
-                <div class="form col-lg mt-5" method="POST" action="">
+                <div class="form col-lg mt-2" method="POST" action="">
                     <div class="col mt-2">
                         <label for="email">Email:</label>
                         <input type="email" name="email" id="email" class="form-control" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
@@ -65,92 +67,16 @@ error_reporting(E_ALL);
         </div>
 
         <div class="col"></div>
-    
+
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        The best way to keep up to date!
+    </div>
     </div>
 
 </div>
     
-<?php
-
-    // Output the user from already on the database:
-
-    // $usersObj = new UsersView();  
-    // $usersObj->showUser("Laura");
-
-    // Insert the value every time i refresh the pages:
-
-    // $usersObj2 = new UsersContr();
-    // $usersObj2->createUser("Laura", "Matveeff", "04-08-1983");    
-
-    if (isset($_REQUEST['submit'])){
-    
-
-        extract($_REQUEST);
-        
-
-        if(!empty($user) &&  !empty($email) && !empty($first) && !empty($last) && !empty($email)) {
-
-                $options = [
-                    'cost' => 12,
-                ];
-            
-            
-                $hashs = password_hash($pass, PASSWORD_BCRYPT , $options);
-                var_dump($hashpass);
-
-                $usersObj = new UsersView();
-                
-                if ($usersObj->user_exists($user) != $user) {
-                    
-                    if ($usersObj->email_exist($email) != $email) {                        
-
-                        $usersObj = new UsersContr();
-                        $usersObj->createUser($email, $user, $hashs, $first, $last);
-            
-
-                        echo "<p>You have been registerd on our sistem</p>";
-                        header('Location: login.php');
-
-                        exit;
-                    } else {
-                        echo '<div class="container">
-                            <div class="row">
-                                <div class="col"></div>
-                                <div class="col mt_2">Email already taken!</div>
-                                <div class="col"></div>
-                            </div>
-                        </div>'; 
-
-                    }
-                    
-                }  
-                else
-                {
-                    echo '<div class="container">
-                            <div class="row">
-                                <div class="col"></div>
-                                <div class="col mt_2">User already taken!</div>
-                                <div class="col"></div>
-                            </div>
-                        </div>'; 
-                }     
-            
-        }
-
-        else
-        {
-            echo '<div class="container">
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="col mt_2">Something goes wrong!</div>
-                        <div class="col"></div>
-                    </div>
-                </div>'; 
-        }
-
-    }
-    
-?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>

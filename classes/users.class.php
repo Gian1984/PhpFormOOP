@@ -44,6 +44,15 @@ class Users extends Dbh { //here we extend to the database coz this will be the 
         
     }
 
+    protected function setMessage($email, $messages){
+
+        $sql = "INSERT INTO messages (email, messages) VALUES (?, ?)"; //selecting from database
+        $stmt = $this->connect()->prepare($sql); //istantiate a new statement and utilize $this coz i refer to database class and ask to the database to prepare it
+        $stmt->execute([$email, $messages]);
+
+        
+    }
+
 }
 
 

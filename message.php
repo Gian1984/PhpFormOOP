@@ -1,23 +1,3 @@
-<?php session_start();
-    $login="login.php";
-    $subscribe="subscribe.php";
-    $msg = "";
-    if (isset($_SESSION['user'])) {
-        $name = $_SESSION['user'];
-
-        echo '<h5><span class="badge bg-dark m-2">'.$name.'</span></h5>';
-        
-    }else {
-        header("location: login.php");
-        // $msg = '<li class="nav-item"><a class="nav-link text-danger" href="'.$login.'">Log in</a></li><li class="nav-item"><a class="nav-link text-danger" href="'.$subscribe.'">Subscribe</a></li>';
-    }
-
-    if(isset($_POST['logout'])){ //logging out
-        session_destroy();
-        header("location: logout.php");
-    }
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,10 +18,10 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="home.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="../home.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="message.php">Write us</a>
+          <a class="nav-link" href="../message.php">Write us</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -66,7 +46,37 @@
   </div>
 </nav>
 
+<div class="container">
 
+    <div class="card text-center mt-5">
+    <div class="card-header">
+        Write us your opinions or ideas to make us greater!
+    </div>
+    <div class="card-body">
+    <h5 class="card-title mb-2">Please fill the fields to send us a message</h5>
+            <form>
+            <div class="form-group mt-2">
+                <label for="exampleFormControlInput1">Email address:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            </div>
+            
+            <div class="form-group mt-2 mb-2">
+                <label for="exampleFormControlTextarea1">Message:</label>
+                <textarea class="form-control" id="messages" name="messages" rows="3" required></textarea>
+            </div>
+            <input type="submit" name="submit" value="Send" style="width:auto">
+        </form>
+
+    </div>
+    <div class="card-footer text-muted">
+        Thanks for your feedback!
+    </div>
+    </div>
+
+</div>
+<?php 
+    include "includes/message.inc.php"
+?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>

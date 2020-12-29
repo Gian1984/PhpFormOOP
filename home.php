@@ -38,10 +38,10 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="home.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="../home.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="message.php">Write us</a>
+          <a class="nav-link" href="../message.php">Write us</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -78,7 +78,7 @@
             <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Business</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text">Exclusive reporting and breaking news about the most important business.</p>
                 <a href="../apppage/business.php" class="btn btn-outline-dark">Business</a>
             </div>
             </div>
@@ -87,7 +87,7 @@
             <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Politics</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text">A daily newsletter exploring the people, issues and ideas reshaping our political world.</p>
                 <a href="../apppage/politics.php" class="btn btn-outline-dark">Politics</a>
             </div>
             </div>
@@ -99,7 +99,7 @@
             <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Science</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text">The latest science news and developments about space, animal behavior, plant life ... </p>
                 <a href="../apppage/science.php" class="btn btn-outline-dark">Science</a>
             </div>
             </div>
@@ -108,7 +108,7 @@
             <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Technology</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text">Discover the latest tech gadgets and innovations.</p>
                 <a href="../apppage/technology.php" class="btn btn-outline-dark">Technology</a>
             </div>
             </div>
