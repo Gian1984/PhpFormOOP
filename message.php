@@ -30,7 +30,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">NYT Feeds</a>
+    <!-- <a class="navbar-brand" href="#">NYT Feeds</a> -->
+    <img src="../img/370px-NewYorkTimes.svg.png" style="" alt="logo" class="img-thumbnail">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -54,12 +55,9 @@
           </ul>
         </li>
       </ul>
+      
       <form class="d-flex">
-        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-        <div class="d-grid gap-2 d-md-block">
-            <a class="btn btn-outline-dark" href="../logout.php" role="button">Log out</a>  
-            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-        </div>
+            <a class="btn btn-outline-dark mt-3" href="../logout.php" role="button">Log out</a>  
       </form>
     </div>
   </div>

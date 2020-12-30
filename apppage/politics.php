@@ -32,7 +32,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">NYT Feeds</a>
+    <!-- <a class="navbar-brand" href="#">NYT Feeds</a> -->
+    <img src="../img/370px-NewYorkTimes.svg.png" style="" alt="logo" class="img-thumbnail">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -58,137 +59,184 @@
       </ul>
       
       <form class="d-flex">
-        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-        <div class="d-grid gap-2 d-md-block">
-            <a class="btn btn-outline-dark" href="../logout.php" role="button">Log out</a>  
-            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-        </div>
+            <a class="btn btn-outline-dark mt-3" href="../logout.php" role="button">Log out</a>  
       </form>
     </div>
   </div>
 </nav>
 
-<div class="container">
-    <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture0">
-      <div class="card-body">
-        <h5 class="card-title" id="demo0"></h5>
-        <p class="card-text" id="abstract0"></p>
-        <p class="text-muted fst-italic fw-lighter">
-          Read full article <a href="" id="fullArticle0" class="text-reset">here!</a>
-        </p>
-        <p class="card-text"><small class="text-muted">Last updated:</small></p>
-        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date0"></small></p>
+<div class="container mb-4">
+
+  <div class="row mt-2">
+
+        <div class="col-sm-6">
+        <div class="card h-100">
+          <img src="" class="card-img-top" id="picture0">
+          <div class="card-body">
+            <h5 class="card-title" id="demo0"></h5>
+            <p class="card-text" id="abstract0"></p>
+            <p class="text-muted fst-italic fw-lighter">
+              Read full article <a href="" id="fullArticle0" class="text-reset">here!</a>
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated:</small></p>
+            <p class="card-text"><small class="text-muted fw-lighter" id="updated_date0"></small></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture1">
-      <div class="card-body">
-        <h5 class="card-title" id="demo1"></h5>
-        <p class="card-text" id="abstract1"></p>
-        <p class="text-muted fst-italic fw-lighter">
-          Read full article <a href="" id="fullArticle1" class="text-reset">here!</a>
-        </p>
-        <p class="card-text"><small class="text-muted">Last updated:</small></p>
-        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date1"></small></p>
+
+      <div class="col-sm-6">
+        <div class="card h-100">
+          <img src="" class="card-img-top" id="picture1">
+          <div class="card-body">
+            <h5 class="card-title" id="demo1"></h5>
+            <p class="card-text" id="abstract1"></p>
+            <p class="text-muted fst-italic fw-lighter">
+              Read full article <a href="" id="fullArticle1" class="text-reset">here!</a>
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated:</small></p>
+            <p class="card-text"><small class="text-muted fw-lighter" id="updated_date1"></small></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture2">
-      <div class="card-body">
-        <h5 class="card-title" id="demo2"></h5>
-        <p class="card-text" id="abstract2"></p>
-        <p class="text-muted fst-italic fw-lighter">
-          Read full article <a href="" id="fullArticle2" class="text-reset">here!</a>
-        </p>
-        <p class="card-text"><small class="text-muted">Last updated:</small></p>
-        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date2"></small></p>
+  
+  </div>
+
+  <div class="row mt-2">
+
+        <div class="col-sm-6">
+        <div class="card h-100">
+          <img src="" class="card-img-top" id="picture2">
+          <div class="card-body">
+            <h5 class="card-title" id="demo2"></h5>
+            <p class="card-text" id="abstract2"></p>
+            <p class="text-muted fst-italic fw-lighter">
+              Read full article <a href="" id="fullArticle2" class="text-reset">here!</a>
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated:</small></p>
+            <p class="card-text"><small class="text-muted fw-lighter" id="updated_date2"></small></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture3">
-      <div class="card-body">
-        <h5 class="card-title" id="demo3"></h5>
-        <p class="card-text" id="abstract3"></p>
-        <p class="text-muted fst-italic fw-lighter">
-          Read full article <a href="" id="fullArticle3" class="text-reset">here!</a>
-        </p>
-        <p class="card-text"><small class="text-muted">Last updated:</small></p>
-        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date3"></small></p>
+
+      <div class="col-sm-6">
+        <div class="card h-100">
+          <img src="" class="card-img-top" id="picture3">
+          <div class="card-body">
+            <h5 class="card-title" id="demo3"></h5>
+            <p class="card-text" id="abstract3"></p>
+            <p class="text-muted fst-italic fw-lighter">
+              Read full article <a href="" id="fullArticle3" class="text-reset">here!</a>
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated:</small></p>
+            <p class="card-text"><small class="text-muted fw-lighter" id="updated_date3"></small></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture4">
-      <div class="card-body">
-        <h5 class="card-title" id="demo4"></h5>
-        <p class="card-text" id="abstract4"></p>
-        <p class="text-muted fst-italic fw-lighter">
-          Read full article <a href="" id="fullArticle4" class="text-reset">here!</a>
-        </p>
-        <p class="card-text"><small class="text-muted">Last updated:</small></p>
-        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date4"></small></p>
+  
+  </div>
+
+  <div class="row mt-2">
+
+        <div class="col-sm-6">
+        <div class="card h-100">
+          <img src="" class="card-img-top" id="picture4">
+          <div class="card-body">
+            <h5 class="card-title" id="demo4"></h5>
+            <p class="card-text" id="abstract4"></p>
+            <p class="text-muted fst-italic fw-lighter">
+              Read full article <a href="" id="fullArticle4" class="text-reset">here!</a>
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated:</small></p>
+            <p class="card-text"><small class="text-muted fw-lighter" id="updated_date4"></small></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture5">
-      <div class="card-body">
-        <h5 class="card-title" id="demo5"></h5>
-        <p class="card-text" id="abstract5"></p>
-        <p class="text-muted fst-italic fw-lighter">
-          Read full article <a href="" id="fullArticle5" class="text-reset">here!</a>
-        </p>
-        <p class="card-text"><small class="text-muted">Last updated:</small></p>
-        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date5"></small></p>
+
+      <div class="col-sm-6">
+        <div class="card h-100">
+          <img src="" class="card-img-top" id="picture5">
+          <div class="card-body">
+            <h5 class="card-title" id="demo5"></h5>
+            <p class="card-text" id="abstract5"></p>
+            <p class="text-muted fst-italic fw-lighter">
+              Read full article <a href="" id="fullArticle5" class="text-reset">here!</a>
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated:</small></p>
+            <p class="card-text"><small class="text-muted fw-lighter" id="updated_date5"></small></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture6">
-      <div class="card-body">
-        <h5 class="card-title" id="demo6"></h5>
-        <p class="card-text" id="abstract6"></p>
-        <p class="text-muted fst-italic fw-lighter">
-          Read full article <a href="" id="fullArticle6" class="text-reset">here!</a>
-        </p>
-        <p class="card-text"><small class="text-muted">Last updated:</small></p>
-        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date6"></small></p>
+  
+  </div>
+
+  <div class="row mt-2">
+
+        <div class="col-sm-6">
+        <div class="card h-100">
+          <img src="" class="card-img-top" id="picture6">
+          <div class="card-body">
+            <h5 class="card-title" id="demo6"></h5>
+            <p class="card-text" id="abstract6"></p>
+            <p class="text-muted fst-italic fw-lighter">
+              Read full article <a href="" id="fullArticle6" class="text-reset">here!</a>
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated:</small></p>
+            <p class="card-text"><small class="text-muted fw-lighter" id="updated_date6"></small></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture7">
-      <div class="card-body">
-        <h5 class="card-title" id="demo7"></h5>
-        <p class="card-text" id="abstract7"></p>
-        <p class="text-muted fst-italic fw-lighter">
-          Read full article <a href="" id="fullArticle7" class="text-reset">here!</a>
-        </p>
-        <p class="card-text"><small class="text-muted">Last updated:</small></p>
-        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date7"></small></p>
+
+      <div class="col-sm-6">
+        <div class="card h-100">
+          <img src="" class="card-img-top" id="picture7">
+          <div class="card-body">
+            <h5 class="card-title" id="demo7"></h5>
+            <p class="card-text" id="abstract7"></p>
+            <p class="text-muted fst-italic fw-lighter">
+              Read full article <a href="" id="fullArticle7" class="text-reset">here!</a>
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated:</small></p>
+            <p class="card-text"><small class="text-muted fw-lighter" id="updated_date7"></small></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture8">
-      <div class="card-body">
-        <h5 class="card-title" id="demo8"></h5>
-        <p class="card-text" id="abstract8"></p>
-        <p class="text-muted fst-italic fw-lighter">
-          Read full article <a href="" id="fullArticle8" class="text-reset">here!</a>
-        </p>
-        <p class="card-text"><small class="text-muted">Last updated:</small></p>
-        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date8"></small></p>
+  
+  </div>
+
+  <div class="row mt-2">
+
+        <div class="col-sm-6">
+        <div class="card h-100">
+          <img src="" class="card-img-top" id="picture8">
+          <div class="card-body">
+            <h5 class="card-title" id="demo8"></h5>
+            <p class="card-text" id="abstract8"></p>
+            <p class="text-muted fst-italic fw-lighter">
+              Read full article <a href="" id="fullArticle8" class="text-reset">here!</a>
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated:</small></p>
+            <p class="card-text"><small class="text-muted fw-lighter" id="updated_date8"></small></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card mb-3">
-      <img src="" class="card-img-top" id="picture9">
-      <div class="card-body">
-        <h5 class="card-title" id="demo9"></h5>
-        <p class="card-text" id="abstract9"></p>
-        <p class="text-muted fst-italic fw-lighter">
-          Read full article <a href="" id="fullArticle9" class="text-reset">here!</a>
-        </p>
-        <p class="card-text"><small class="text-muted">Last updated:</small></p>
-        <p class="card-text"><small class="text-muted fw-lighter" id="updated_date9"></small></p>
+
+      <div class="col-sm-6">
+        <div class="card h-100">
+          <img src="" class="card-img-top" id="picture9">
+          <div class="card-body">
+            <h5 class="card-title" id="demo9"></h5>
+            <p class="card-text" id="abstract9"></p>
+            <p class="text-muted fst-italic fw-lighter">
+              Read full article <a href="" id="fullArticle9" class="text-reset">here!</a>
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated:</small></p>
+            <p class="card-text"><small class="text-muted fw-lighter" id="updated_date9"></small></p>
+          </div>
+        </div>
       </div>
-    </div>
+  
+  </div>
+
 </div>
 
  <!----------- Footer ------------>
