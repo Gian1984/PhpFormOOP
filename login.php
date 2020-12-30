@@ -1,11 +1,5 @@
 <?php 
-
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
-
  include "includes/login.inc.php"
-
 ?>
 
 <!DOCTYPE html>
@@ -19,32 +13,37 @@ error_reporting(E_ALL);
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- start navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
       <form class="d-flex">
         <div class="d-grid gap-2 d-md-block">
-            <a class="btn btn-outline-dark" href="subscribe.php" role="button">Subscribe</a>  
+            <a class="btn btn-outline-light" href="subscribe.php" role="button">Subscribe</a>  
         </div>
       </form>
     </div>
   </div>
 </nav>
+
+<!-- end navbar -->
+
 <section class="row main-image">
 <div class="container">
 
-    <div class="card text-center m-5">
-    <div class="card-header">
-        Welcome to the NYT feeds! 
+    <div class="card text-center m-5 mx-auto" style="width: 40rem;">
+    <div class="card-header text-white bg-secondary">
+        Welcome! 
     </div>
     <div class="card-body">
-    <h5 class="card-title">Please fill the fields to login</h5>
+    <img src="../img/370px-NewYorkTimes.svg.png" style="" alt="logo" class="img-thumbnail">
     <div class="row">
 
     <div class="col"></div>
 
         <div class="col">
             <form>
-                <div class="form col-lg mt-2" method="POST" action="">
+                <div class="form col-lg mt-2 fw-lighter" method="POST" action="">
                     <div class="col mt-2">
                         <label for="username">Username:</label>
                         <input type="text" name="user" id="user" class="form-control" placeholder="Username" required >
@@ -58,7 +57,7 @@ error_reporting(E_ALL);
                         <input type="password" name="pass" id="pass" class="form-control" placeholder="Password" required >
                     </div>                    
                     <!-- <button type="submit" name="submit" class="btn btn-primary mt-2">Send</button> -->
-                    <input type="submit" name="submit" value="Send" style="width:auto">
+                    <input type="submit" name="submit" value="Login" style="width:auto">
                 </div>
             </form>
         </div>
@@ -68,7 +67,7 @@ error_reporting(E_ALL);
         </div>
 
     </div>
-    <div class="card-footer text-muted">
+    <div class="card-footer text-white bg-secondary">
         The best way to keep up to date!
     </div>
     </div>
