@@ -1,8 +1,4 @@
-<?php 
 
- include "includes/subscribe.inc.php"
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +24,7 @@
 <section class="row main-image">
 <div class="container">
 
-    <div class="card text-center m-4 mx-auto" style="width: 40rem;">
+    <div class="card text-center mt-4 mx-auto" style="max-width: 40rem;">
     <div class="card-header text-white bg-secondary">
         <img src="../img/370px-NewYorkTimes.svg.png" style="" alt="logo" class="img-thumbnail">
     </div>
@@ -84,6 +80,11 @@
     </div>
 
 </div>
+
+<?php 
+ include "includes/subscribe.inc.php"
+?>
+
 </section>   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>

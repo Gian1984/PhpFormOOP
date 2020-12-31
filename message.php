@@ -5,7 +5,6 @@
     if (isset($_SESSION['user'])) {
         $name = $_SESSION['user'];
 
-        // echo '<h5><span class="badge bg-dark m-1">'.$name.'</span></h5>';
 
         echo'<form class="d-flex bg-dark">
         <h5><span class="badge bg-dark ml-4 mt-3 fw-lighter">'.$name.'</span></h5>  
@@ -75,7 +74,7 @@
 
 <div class="container">
 
-    <div class="card text-center mt-5 mb-3 mx-auto" style="width: 40rem;">
+    <div class="card text-center mt-5 mb-3 mx-auto" style="max-width: 40rem;">
     <div class="card-header text-white bg-secondary">
         Write us your opinions or ideas to make us greater!
     </div>

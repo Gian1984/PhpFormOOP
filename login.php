@@ -1,6 +1,4 @@
-<?php 
- include "includes/login.inc.php"
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +29,7 @@
 <section class="row main-image">
 <div class="container">
 
-    <div class="card text-center m-5 mx-auto" style="width: 40rem;">
+    <div class="card text-center m-5 mx-auto" style="max-width: 40rem;">
     <div class="card-header text-white bg-secondary">
         Welcome! 
     </div>
@@ -72,7 +70,9 @@
     </div>
     </div>
 
-    
+    <?php 
+        include "includes/login.inc.php"
+    ?>
 
 </div>
 </section>

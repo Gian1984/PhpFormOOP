@@ -5,7 +5,9 @@
     if (isset($_SESSION['user'])) {
         $name = $_SESSION['user'];
 
-        echo '<h5><span class="badge bg-dark m-1">'.$name.'</span></h5>';
+        echo'<form class="d-flex bg-dark">
+                <h5><span class="badge bg-dark ml-4 mt-3 fw-lighter">'.$name.'</span></h5>  
+              </form>';
         
     }else {
         header("location: login.php");
@@ -26,13 +28,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NYT Feeds Science</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/apppage.css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <!-- <a class="navbar-brand" href="#">NYT Feeds</a> -->
+    
     <img src="../img/370px-NewYorkTimes.svg.png" style="" alt="logo" class="img-thumbnail">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -59,7 +61,7 @@
       </ul>
       
       <form class="d-flex">
-            <a class="btn btn-outline-dark mt-3" href="../logout.php" role="button">Log out</a>  
+            <a class="btn btn-outline-light mt-3" href="../logout.php" role="button">Log out</a>  
       </form>
     </div>
   </div>
