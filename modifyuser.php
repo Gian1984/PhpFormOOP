@@ -5,10 +5,9 @@
     if (isset($_SESSION['user'])) {
         $user = $_SESSION['user'];
 
-
         echo'<form class="d-flex bg-dark">
-              <h5><span class="badge bg-dark ml-4 mt-3 fw-lighter">Welcome '.$user.' !</span></h5>  
-            </form>';
+                <h5><span class="badge bg-dark ml-4 mt-3 fw-lighter">Welcome '.$user.' !</span></h5>  
+              </form>';
         
     }else {
         header("location: login.php");
@@ -18,15 +17,19 @@
         session_destroy();
         header("location: logout.php");
     }
+
+  
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message</title>
+    <title>Modify user</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/message.css">
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
 
@@ -78,43 +81,123 @@
   </div>
 </nav>
 
-<!-- end navabar -->
+<!-- end navbar -->
 
 <section class="row main-image">
 
 <div class="container">
-
-    <div class="card text-center mt-5 mb-3 mx-auto" style="max-width: 40rem;">
+    <div class="card text-center mt-5 mb-5 mx-auto" style="max-width: 60rem;">
     <div class="card-header text-white bg-secondary">
-        Write us your opinions or ideas to make us greater!
+        Enter new mail & password 
     </div>
     <div class="card-body">
+       
     
-            <form>
-            <div class="form-group mt-2 fw-lighter">
-                <label for="exampleFormControlInput1">Email address:</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+        <img src="../img/370px-NewYorkTimes.svg.png" style="" alt="logo" class="img-thumbnail">
+        <div class="row">
+
+            <div class="col"></div>
+
+            <div class="col">
+                <form>
+                    <div class="form col-lg mt-2 fw-lighter" method="POST" action="">
+                        <div class="col mt-2 mb-2">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required >
+                        </div>
+                        <div class="col mt-2 mb-4">
+                            <label for="password">Password:</label>
+                            <input type="password" name="pass" id="pass" class="form-control" placeholder="Password" required >
+                        </div>                    
+                        <input type="submit" name="submit" value="Submit" style="width:auto">
+                    </div>
+                </form>
             </div>
-            
-            <div class="form-group mt-2 mb-2 fw-lighter">
-                <label for="exampleFormControlTextarea1">Message:</label>
-                <textarea class="form-control" id="messages" name="messages" rows="3" required></textarea>
-            </div>
-            <input type="submit" name="submit" value="Send" style="width:auto">
-        </form>
+
+            <div class="col"></div>
+
+        </div>
 
     </div>
+
     <div class="card-footer text-white bg-secondary">
-        Thanks for your feedback!
+        Modify mail & password
     </div>
     </div>
-
 </div>
-<?php 
-    include "includes/message.inc.php"
-?>
+</div>
 
-  </section>
+</section>
+
+<?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+include "includes/class-autoload.inc.php";
+
+if (isset($_REQUEST['submit'])){
+
+    extract($_REQUEST);
+
+    $usersObj = new UsersView();
+    $id=$usersObj->id_recoverUser($user);
+
+    $options = [
+        'cost' => 12,
+    ];
+
+    $hashs = password_hash($pass, PASSWORD_BCRYPT , $options);
+
+    $usersObj = new UsersView();
+    if ($usersObj->email_exist($email) != $email) { 
+
+            $usersObj = new UsersContr();
+            $usersObj->createNewMailPsw($email, $hashs, $id);
+            echo '<div class="container mt-3"> 
+                                            <div class="row">
+                                            <div class="col"></div>
+                                            <div class="col">
+                                                <div class="alert alert-success text-center" role="alert">
+                                                Yes, you have new password & mail!
+                                                </div>
+                                            </div>
+                                            <div class="col"></div>
+                                            </div>
+                                            </div>';
+
+        } else {
+            echo'<div class="container mt-3"> 
+                                            <div class="row">
+                                            <div class="col"></div>
+                                            <div class="col">
+                                                <div class="alert alert-danger text-center" role="alert">
+                                                Email already taken!
+                                                </div>
+                                            </div>
+                                            <div class="col"></div>
+                                            </div>
+                                            </div>';
+        }
+
+    }else {
+
+        echo'<div class="container mt-3"> 
+                                            <div class="row">
+                                            <div class="col"></div>
+                                            <div class="col">
+                                                <div class="alert alert-danger text-center" role="alert">
+                                                Something goes wrong!
+                                                </div>
+                                            </div>
+                                            <div class="col"></div>
+                                            </div>
+                                            </div>';
+
+    }
+                
+?>
 
 <!----------- Footer ------------>
 <footer class="footer-bs">
@@ -157,6 +240,7 @@
             </div>
         </div>
     </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>

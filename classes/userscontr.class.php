@@ -8,6 +8,12 @@ class UsersContr extends Users {
         $this->setUser($email, $user, $hashs, $firstname, $lastname);
     }
 
+    //public function to change mail & psw
+    public function createNewMailPsw($email, $hashs, $id) {
+
+        $this->setNewMailPsw($email, $hashs, $id);
+    }
+
 
 
     // Working with message -> function to send user name & message to the database

@@ -46,6 +46,16 @@ class Users extends Dbh { //here we extend to the database coz this will be the 
         
     }
 
+    //protected function to change mail & psw
+    protected function setNewMailPsw($email, $hashs, $id){
+       
+        $sql = "UPDATE users SET email=?, hashs=? WHERE id = $id"; //selecting from database
+        $stmt = $this->connect()->prepare($sql); //istantiate a new statement and utilize $this coz i refer to database class and ask to the database to prepare it
+        $stmt->execute([$email, $hashs]);
+
+        
+    }
+
     //Working with messages table
 
     protected function setMessage($email, $messages){
@@ -70,7 +80,6 @@ class Users extends Dbh { //here we extend to the database coz this will be the 
         return $result;    // i put all the the information of the fetch indise result to be able to send it to the users.view.php 
     }
 
-    //Working with favourite 
 
     protected function setUserFav($user, $science, $business, $politics, $technology){
 

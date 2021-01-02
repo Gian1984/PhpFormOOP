@@ -22,8 +22,63 @@ $usersObj = new UsersView();
 
         } else {
 
-            echo 'something goes wrong';
+            echo 'Still no favourite added';
 
+        }
+        
+
+        // remove favs
+
+        if (isset($_POST['business'])){
+  
+    
+            $usersObj = new UsersView();
+            $id=$usersObj->id_recover($user);
+            $usersObj = new UsersContr();
+            $usersObj->createFavouriteBusiness('', $id);
+            echo'';
+            header("Refresh:0");
+        } else {
+            echo'';
+        }
+
+        if (isset($_POST['science'])){
+  
+    
+            $usersObj = new UsersView();
+            $id=$usersObj->id_recover($user);
+            $usersObj = new UsersContr();
+            $usersObj->createFavouriteScience('', $id);
+            echo'';
+            header("Refresh:0");
+        } else {
+            echo'';
+        }
+
+        if (isset($_POST['technology'])){
+  
+    
+            $usersObj = new UsersView();
+            $id=$usersObj->id_recover($user);
+            $usersObj = new UsersContr();
+            $usersObj->createFavouriteTechnology('', $id);
+            echo'';
+            header("Refresh:0");
+        } else {
+            echo'';
+        }
+
+        if (isset($_POST['politics'])){
+  
+    
+            $usersObj = new UsersView();
+            $id=$usersObj->id_recover($user);
+            $usersObj = new UsersContr();
+            $usersObj->createFavouritePolitics('', $id);
+            echo'';
+            header("Refresh:0");
+        } else {
+            echo'';
         }
 
 ?>

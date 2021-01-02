@@ -34,6 +34,8 @@
 </head>
 <body>
 
+<!-- start navbar -->
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     
@@ -68,10 +70,7 @@
             Profile
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="../apppage/science.php">Science</a></li>
-            <li><a class="dropdown-item" href="../apppage/business.php">Business</a></li>
-            <li><a class="dropdown-item" href="../apppage/politics.php">Politics</a></li>
-            <li><a class="dropdown-item" href="../apppage/technology.php">Technology</a></li>
+            <li><a class="dropdown-item" href="../modifyuser.php">Modify psw/mail</a></li>
           </ul>
         </li>
       </ul>
@@ -83,6 +82,8 @@
   </div>
 </nav>
 
+<!-- end navbar -->
+
 <section class="row main-image">
 
 <div class="container">
@@ -93,6 +94,7 @@
     <div class="card-body">
         
     <div class="row mt-2">
+
         <div class="col-sm-6">
             <div class="card">
             <img class="card-img-top" src="img/pexels-pixabay-210607.jpg" alt="Card image cap">
@@ -106,6 +108,7 @@
               </div>
             </div>
         </div>
+
         <div class="col-sm-6">
             <div class="card">
             <img class="card-img-top" src="img/pexels-karolina-grabowska-4386371.jpg" alt="Card image cap">
@@ -122,6 +125,7 @@
     </div>
 
     <div class="row mt-3">
+
         <div class="col-sm-6">
             <div class="card">
             <img class="card-img-top" src="img/pexels-rodolfo-clix-1366942.jpg" alt="Card image cap">
@@ -135,6 +139,7 @@
               </div>
             </div>
         </div>
+
         <div class="col-sm-6">
             <div class="card">
             <img class="card-img-top" src="img/pexels-pixabay-373543.jpg" alt="Card image cap">

@@ -39,7 +39,7 @@ if (isset($_POST['business'])){
                                               <a href="../apppage/business.php" class="btn btn-outline-dark">Business</a>
                                               </div>
                                               <div class="card-footer text-muted">
-                                              Business
+                                              <form method="post"><input type="submit" name="business" value="Remove fav" style="width:auto"></form>
                                               </div>
                                               </div>', $id);
             
@@ -74,7 +74,7 @@ if (isset($_POST['business'])){
                                               <a href="../apppage/business.php" class="btn btn-outline-dark">Business</a>
                                               </div>
                                               <div class="card-footer text-muted">
-                                              Business
+                                              <form method="post"><input type="submit" name="business" value="Remove fav" style="width:auto"></form>
                                               </div>
                                               </div>', $id);
                   
@@ -140,10 +140,10 @@ if (isset($_POST['politics'])){
                                                 <div class="card-body">
                                                 <h5 class="card-title">Business</h5>
                                                 <p class="card-text">Exclusive reporting and breaking news about the most important business.</p>
-                                                <a href="../apppage/politics.php" class="btn btn-outline-dark">Business</a>
+                                                <a href="../apppage/politics.php" class="btn btn-outline-dark">Politics</a>
                                                 </div>
                                                 <div class="card-footer text-muted">
-                                                Politics
+                                                    <form method="post"><input type="submit" name="politics" value="Remove fav" style="width:auto"></form>
                                                 </div>
                                                 </div>', $id);
   
@@ -162,10 +162,10 @@ if (isset($_POST['politics'])){
                                                 <div class="card-body">
                                                 <h5 class="card-title">Politics</h5>
                                                 <p class="card-text">A daily newsletter exploring the people, issues and ideas reshaping our political world.</p>
-                                                <a href="../apppage/politics.php" class="btn btn-outline-dark">Business</a>
+                                                <a href="../apppage/politics.php" class="btn btn-outline-dark">Politics</a>
                                                 </div>
                                                 <div class="card-footer text-muted">
-                                                Politics
+                                                <form method="post"><input type="submit" name="politics" value="Remove fav" style="width:auto"></form>
                                                 </div>
                                                 </div>', $id);
                     
@@ -204,10 +204,10 @@ if (isset($_POST['politics'])){
                                                 <div class="card-body">
                                                 <h5 class="card-title">Technology</h5>
                                                 <p class="card-text">Discover the latest tech gadgets, innovations, energy & environment.</p>
-                                                <a href="../apppage/technology.php" class="btn btn-outline-dark">Business</a>
+                                                <a href="../apppage/technology.php" class="btn btn-outline-dark">Technology</a>
                                                 </div>
                                                 <div class="card-footer text-muted">
-                                                Technology
+                                                    <form method="post"><input type="submit" name="technology" value="Remove fav" style="width:auto"></form>
                                                 </div>
                                                 </div>', $id);
   
@@ -226,10 +226,10 @@ if (isset($_POST['politics'])){
                                                 <div class="card-body">
                                                 <h5 class="card-title">Technology</h5>
                                                 <p class="card-text">Discover the latest tech gadgets, innovations, energy & environment.</p>
-                                                <a href="../apppage/technology.php" class="btn btn-outline-dark">Business</a>
+                                                <a href="../apppage/technology.php" class="btn btn-outline-dark">Technology</a>
                                                 </div>
                                                 <div class="card-footer text-muted">
-                                                Technology
+                                                    <form method="post"><input type="submit" name="technology" value="Remove fav" style="width:auto"></form>
                                                 </div>
                                                 </div>', $id);
                     
@@ -269,10 +269,10 @@ if (isset($_POST['politics'])){
                                                 <div class="card-body">
                                                 <h5 class="card-title">Science</h5>
                                                 <p class="card-text">The latest science news and developments about space, animal behavior, plant life ...</p>
-                                                <a href="../apppage/science.php" class="btn btn-outline-dark">Business</a>
+                                                <a href="../apppage/science.php" class="btn btn-outline-dark">Science</a>
                                                 </div>
                                                 <div class="card-footer text-muted">
-                                                Science
+                                                    <form method="post"><input type="submit" name="science" value="Remove fav" style="width:auto"></form>
                                                 </div>
                                                 </div>', $id);
   
@@ -291,10 +291,10 @@ if (isset($_POST['politics'])){
                                                 <div class="card-body">
                                                 <h5 class="card-title">Science</h5>
                                                 <p class="card-text">The latest science news and developments about space, animal behavior, plant life ...</p>
-                                                <a href="../apppage/science.php" class="btn btn-outline-dark">Business</a>
+                                                <a href="../apppage/science.php" class="btn btn-outline-dark">Science</a>
                                                 </div>
                                                 <div class="card-footer text-muted">
-                                                Science
+                                                    <form method="post"><input type="submit" name="science" value="Remove fav" style="width:auto"></form>
                                                 </div>
                                                 </div>', $id);
                     

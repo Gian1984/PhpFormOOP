@@ -1,0 +1,11 @@
+body {
+    background-color: #343a40;
+    margin: 0;
+}
+
+.main-image {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../img/pexels-digital-buggu-167538.jpg');
+    background-size: cover;
+}
