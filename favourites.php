@@ -91,7 +91,7 @@
         
     
     <?php
-        include "includes/download.favs.fav.inc.php";
+        include "includes/download.remove.fav.inc.php";
     ?>
 
 

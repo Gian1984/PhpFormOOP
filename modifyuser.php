@@ -183,17 +183,7 @@ if (isset($_REQUEST['submit'])){
 
     }else {
 
-        echo'<div class="container mt-3"> 
-                                            <div class="row">
-                                            <div class="col"></div>
-                                            <div class="col">
-                                                <div class="alert alert-danger text-center" role="alert">
-                                                Something goes wrong!
-                                                </div>
-                                            </div>
-                                            <div class="col"></div>
-                                            </div>
-                                            </div>';
+        echo'';
 
     }
                 
