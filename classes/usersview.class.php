@@ -9,6 +9,7 @@ class UsersView extends Users {
         
     }
 
+    //working for the table users
     public function user_exists($user){
 
     $results = $this->getUser($user);
@@ -27,6 +28,59 @@ class UsersView extends Users {
         $results = $this->getUser($user);
         return $results[0]['hashs'];
     
+    }
+
+
+
+
+    //working on the table favourite
+
+    public function showUserFav($user){ // pass a parameter $name that i must query coz it's the same i'm gonna asking from the database
+
+        $results = $this->getUserFav($user);    //i  refer to a method extended by Users Class 
+        echo "Full name: ".$results[0]['id']." ".$results[0]['user']." ".$results[0]['science']." ".$results[0]['business']." ".$results[0]['politics']." ".$results[0]['technology'];
+        
+    }
+
+    public function science_recover($user){
+        
+        $results = $this->getUserFav($user);
+        return $results[0]['science'];
+    
+    }
+
+    public function business_recover($user){
+        
+        $results = $this->getUserFav($user);
+        return $results[0]['business'];
+    
+    }
+
+    public function politics_recover($user){
+        
+        $results = $this->getUserFav($user);
+        return $results[0]['politics'];
+    
+    }
+
+    public function technology_recover($user){
+        
+        $results = $this->getUserFav($user);
+        return $results[0]['technology'];
+    
+    }
+
+    public function id_recover($user){
+        
+        $results = $this->getUserFav($user);
+        return $results[0]['id'];
+    
+    }
+    public function user_existsFav($user){
+
+        $results = $this->getUserFav($user);
+        return $results != null;
+        
     }
     
 }

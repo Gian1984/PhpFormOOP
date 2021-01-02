@@ -9,7 +9,6 @@
         
 
         if(!empty($user) &&  !empty($email) &&  !empty($pass)) {
-                // var_dump($pass);
                 
                 $usersObj = new UsersView();
                 

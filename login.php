@@ -54,7 +54,6 @@
                         <label for="password">Password:</label>
                         <input type="password" name="pass" id="pass" class="form-control" placeholder="Password" required >
                     </div>                    
-                    <!-- <button type="submit" name="submit" class="btn btn-primary mt-2">Send</button> -->
                     <input type="submit" name="submit" value="Login" style="width:auto">
                 </div>
             </form>

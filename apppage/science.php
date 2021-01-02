@@ -3,10 +3,10 @@
     $subscribe="subscribe.php";
     $msg = "";
     if (isset($_SESSION['user'])) {
-        $name = $_SESSION['user'];
+        $user = $_SESSION['user'];
 
         echo'<form class="d-flex bg-dark">
-                <h5><span class="badge bg-dark ml-4 mt-3 fw-lighter">'.$name.'</span></h5>  
+                <h5><span class="badge bg-dark ml-4 mt-3 fw-lighter">Welcome '.$user.' !</span></h5>  
               </form>';
         
     }else {
@@ -46,6 +46,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../message.php">Write us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../favourites.php">Favourites</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

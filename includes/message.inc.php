@@ -1,9 +1,5 @@
 <?php
 
-if(isset($_POST['logout'])){ //logging out
-    session_destroy();
-    header("location: logout.php");
-}
 
 include "includes/class-autoload.inc.php";
 

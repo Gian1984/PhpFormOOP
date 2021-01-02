@@ -6,7 +6,7 @@
         $user = $_SESSION['user'];
 
         echo'<form class="d-flex bg-dark">
-                <h5><span class="badge bg-dark ml-4 mt-3 fw-lighter">Welcome '.$user.' !</span></h5>  
+                <h5><span class="badge bg-dark ml-4 mt-3 fw-lighter">Welcome '.$user.' !</span></h5>    
               </form>';
         
     }else {
@@ -63,17 +63,6 @@
             <li><a class="dropdown-item" href="../apppage/technology.php">Technology</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Profile
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="../apppage/science.php">Science</a></li>
-            <li><a class="dropdown-item" href="../apppage/business.php">Business</a></li>
-            <li><a class="dropdown-item" href="../apppage/politics.php">Politics</a></li>
-            <li><a class="dropdown-item" href="../apppage/technology.php">Technology</a></li>
-          </ul>
-        </li>
       </ul>
       
       <form class="d-flex">
@@ -88,67 +77,15 @@
 <div class="container">
     <div class="card text-center mt-5 mb-5 mx-auto" style="max-width: 60rem;">
     <div class="card-header text-white bg-secondary">
-        Welcome to the NYT feeds! 
+        Your favourite feeds! 
     </div>
     <div class="card-body">
         
-    <div class="row mt-2">
-        <div class="col-sm-6">
-            <div class="card">
-            <img class="card-img-top" src="img/pexels-pixabay-210607.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Business</h5>
-                <p class="card-text">Exclusive reporting and breaking news about the most important business.</p>
-                <a href="../apppage/business.php" class="btn btn-outline-dark">Business</a>
-            </div>
-              <div class="card-footer">                  
-                  <form method="post"><input type="submit" name="business" value="Add to favourite" style="width:auto"></form>
-              </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-            <img class="card-img-top" src="img/pexels-karolina-grabowska-4386371.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Politics</h5>
-                <p class="card-text">A daily newsletter exploring the people, issues and ideas reshaping our political world.</p>
-                <a href="../apppage/politics.php" class="btn btn-outline-dark">Politics</a>
-            </div>
-              <div class="card-footer">
-                <form method="post"><input type="submit" name="politics" value="Add to favourite" style="width:auto"></form>
-              </div>
-            </div>
-        </div>
-    </div>
+    
+    <?php
+        include "includes/download.favs.fav.inc.php";
+    ?>
 
-    <div class="row mt-3">
-        <div class="col-sm-6">
-            <div class="card">
-            <img class="card-img-top" src="img/pexels-rodolfo-clix-1366942.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Science</h5>
-                <p class="card-text">The latest science news and developments about space, animal behavior, plant life ... </p>
-                <a href="../apppage/science.php" class="btn btn-outline-dark">Science</a>
-            </div>
-              <div class="card-footer">
-                <form method="post"><input type="submit" name="science" value="Add to favourite" style="width:auto"></form>
-              </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-            <img class="card-img-top" src="img/pexels-pixabay-373543.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Technology</h5>
-                <p class="card-text">Discover the latest tech gadgets, innovations, energy & environment.</p>
-                <a href="../apppage/technology.php" class="btn btn-outline-dark">Technology</a>
-            </div>
-              <div class="card-footer">
-              <form method="post"><input type="submit" name="technology" value="Add to favourite" style="width:auto"></form>
-              </div>
-            </div>
-        </div>
-    </div>
 
     </div>
     <div class="card-footer text-white bg-secondary">
@@ -160,11 +97,6 @@
 
 </section>
 
-<?php
-
-include "includes/upload.favs.home.inc.php"
-                
-?>
 
 <!----------- Footer ------------>
 <footer class="footer-bs">
